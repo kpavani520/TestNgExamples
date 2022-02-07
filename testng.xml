@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="day1.Listeners">
+		</listener>
+	</listeners>
+	<parameter name="URL" value="qaclickacademy" />
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="day1.Test1">
+				<methods>
+					<include name="Method2" />
+				</methods>
+			</class>
+			<class name="day1.Test2" />
+		</classes>
+	</test>
+	<test name="CarLoans">
+		<parameter name="URL" value="qaclickacademy" />
+		<parameter name="UserName" value="pavani1234" />
+		<classes>
+			<class name="day1.CarLoan">
+			</class>
+		</classes>
+	</test>
+	<test name="HomeLoans">
+		<classes>
+			<class name="day1.HomeLoan">
+			</class>
+		</classes>
+	</test>
+	<test name="dataprovide">
+		<classes>
+			<class name="day1.DataProviderForTests">
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->

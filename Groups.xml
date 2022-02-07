@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test cases from different classes">
+	<test name="Regression">
+		<groups>
+			<run>
+			<!-- If we want to execute only smoke tests -->
+				<!--  <include name="Smoke" />-->
+			<!--  If we don't want to execute the smoke tests -->
+				<exclude name="Smoke"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="day1.Test1" />
+			<class name="day1.Test2" />
+			<class name="day1.CarLoan" />
+			<class name="day1.HomeLoan" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
