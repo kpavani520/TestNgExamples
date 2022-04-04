@@ -22,5 +22,6 @@ public class NumberOfDigits {
 		num=num/10;
 	}
 	return result;
+	
 	}
 }
